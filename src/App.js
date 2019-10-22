@@ -5,7 +5,6 @@ import MovieForm from "./components/movieForm";
 import Customers from "./components/customers";
 import Rentals from "./components/rentals";
 import NotFound from "./components/notFound";
-import NavBar from "./components/navBar";
 import LoginForm from "./components/loginForm";
 import Register from "./components/register";
 import "./App.js";
@@ -14,7 +13,6 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <NavBar />
         <main className="container">
           <Switch>
             <Route path="/login" component={LoginForm}></Route>

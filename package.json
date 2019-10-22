@@ -13,14 +13,19 @@
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.1.1",
-    "react-webpack": "^0.4.1"
+    "react-webpack": "^0.4.1",
+    "todomvc-app-css": "^2.2.0",
+    "todomvc-common": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "percy": "react-percy"
+    "percy": "react-percy",
+    "presnapshots": "http-server -s -p 8000 &",
+    "snapshots": "percy exec -- node snapshots.js",
+    "postsnapshots": "pkill -f 'http-server -s -p 8000'"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,6 +44,9 @@
   },
   "devDependencies": {
     "@percy/react": "^0.4.6",
-    "eslint-plugin-react-percy": "^0.2.4"
+    "@percy/script": "^1.0.0",
+    "eslint": "^6.5.1",
+    "eslint-plugin-react-percy": "^0.2.4",
+    "http-server": "^0.11.1"
   }
 }
